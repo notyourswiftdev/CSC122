@@ -1,22 +1,21 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include <vector>
+#include <algorithm>
+#include <numeric>
+
 class List {
     private:
-        double* data;
-        long size;
-
+        std::vector<double> numbers;
+    
     public:
-        enum { MAX_SIZE = 1000 };
-
-        void Resize(long numValues);
-        void Clear();
-        void SetValue(double value, long pos);
-        double GetValue(long pos);
-        void Input();
-        void Display();
-        List();
-        ~List();
+        void addNumber(double num);
+        void displayList();
+        double calculateAverage();
+        double calculateMedian();
+        void sortData();
+        void resizeList(int newSize);
 };
 
 #endif
